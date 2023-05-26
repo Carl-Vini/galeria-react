@@ -1,11 +1,16 @@
 import Tags from "../tags";
+import styles from './galeria.module.scss'
+import fotos from './fotos.json'
+
+
+import Cards from "./cards";
 
 export default function Galeria() {
     return (
-       <section> 
-        <h2>Navegue pela galeria</h2>
-        <Tags />
-        <ul></ul>
-       </section>
+        <section className={styles.galeria}>
+            <h2>Navegue pela galeria</h2>
+            <Tags />
+            <Cards item={fotos} styles={styles}/>
+        </section>
     )
 }
